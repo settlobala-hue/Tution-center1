@@ -15,6 +15,19 @@
       overflow-x: hidden;
     }
 
+    .lang-toggle {
+      position: fixed;
+      top: 15px;
+      right: 20px;
+      background: #ffd700;
+      color: #000;
+      padding: 8px 15px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: 600;
+      z-index: 100;
+    }
+
     .container {
       text-align: center;
       padding: 50px 20px;
@@ -174,82 +187,101 @@
 </head>
 <body>
 
+  <div class="lang-toggle" onclick="toggleLanguage()">தமிழ்</div>
+
   <div class="container">
     <div class="section logo">
-      <!-- ✅ Use converted direct Drive link -->
-      <img src="p1.jpeg" style="border-radius: 50%;" alt="Rise & Shine Tuition Centre Logo">
+      <img src="p1.jpeg" style="border-radius: 50% " alt="Logo">
     </div>
 
-    <h1 class="section">Rise & Shine Tuition Centre</h1>
-    <h2 class="section">From LKG to XII – Strong Basics, Bright Future</h2>
-    <p class="subheading section">✨ Admissions Open! ✨</p>
+    <h1 class="section" data-en="Rise & Shine Tuition Centre" data-ta="ரைஸ் & ஷைன் ட்யூஷன் சென்டர்">Rise & Shine Tuition Centre</h1>
+    <h2 class="section" data-en="From LKG to XII – Strong Basics, Bright Future" data-ta="LKG முதல் XII வரை – வலுவான அடித்தளம், பிரகாசமான எதிர்காலம்">From LKG to XII – Strong Basics, Bright Future</h2>
+    <p class="subheading section" data-en="✨ Admissions Open! ✨" data-ta="✨ சேர்க்கைகள் திறக்கப்பட்டுள்ளன! ✨">✨ Admissions Open! ✨</p>
 
     <div class="card-container section">
       <div class="card">
-        <h3>Maths</h3>
-        <p>Concept clarity with real-life examples and fun activities.</p>
+        <h3 data-en="Maths" data-ta="கணிதம்">Maths</h3>
+        <p data-en="Concept clarity with real-life examples and fun activities."
+           data-ta="நிகழ்வுகளில் எடுத்துக்காட்டுகளுடன் கருத்துகளை தெளிவாக்குதல் மற்றும் பொழுதுபோக்கு செயல்பாடுகள்.">
+           Concept clarity with real-life examples and fun activities.
+        </p>
       </div>
       <div class="card">
-        <h3>Science</h3>
-        <p>Learn experiments, projects, and critical thinking the smart way.</p>
+        <h3 data-en="Science" data-ta="அறிவியல்">Science</h3>
+        <p data-en="Learn experiments, projects, and critical thinking the smart way."
+           data-ta="சோதனைகள், திட்டங்கள் மற்றும் புத்திசாலியான வழியில் விமர்சன சிந்தனை கற்றுக்கொள்ளுங்கள்.">
+           Learn experiments, projects, and critical thinking the smart way.
+        </p>
       </div>
       <div class="card">
-        <h3>English</h3>
-        <p>Improve grammar, writing, and communication confidence.</p>
+        <h3 data-en="English" data-ta="ஆங்கிலம்">English</h3>
+        <p data-en="Improve grammar, writing, and communication confidence."
+           data-ta="இலக்கணம், எழுத்து மற்றும் தொடர்பு நம்பிக்கையை மேம்படுத்துங்கள்.">
+           Improve grammar, writing, and communication confidence.
+        </p>
       </div>
       <div class="card">
-        <h3>All Subjects</h3>
-        <p>Comprehensive tuition for every board and standard.</p>
+        <h3 data-en="All Subjects" data-ta="அனைத்து பாடங்கள்">All Subjects</h3>
+        <p data-en="Comprehensive tuition for every board and standard."
+           data-ta="ஒவ்வொரு போர்டுக்கும் மற்றும் தரத்துக்கும் விரிவான ட்யூஷன்.">
+           Comprehensive tuition for every board and standard.
+        </p>
       </div>
     </div>
 
     <div class="details section">
-      <h3>👩‍🏫 Expert Faculty</h3>
-      <p><strong>V. Gokila</strong> – B.Sc. (Mathematics)<br>
-      <strong>D. Kaviya Anjali</strong> – B.A., M.A. (English)<br>
-      <strong>P. Shalini</strong> – B.A. (English), M.B.A</p>
+      <h3 data-en="👩‍🏫 Expert Faculty" data-ta="👩‍🏫 நிபுணர் ஆசிரியர்கள்">👩‍🏫 Expert Faculty</h3>
+      <p>
+        <strong>V. Gokila</strong> – B.Sc. (Mathematics)<br>
+        <strong>D. Kaviya Anjali</strong> – B.A., M.A. (English)<br>
+        <strong>P. Shalini</strong> – B.A. (English), M.B.A
+      </p>
 
-      <h3>📘 Classes Offered</h3>
+      <h3 data-en="📘 Classes Offered" data-ta="📘 வழங்கப்படும் வகுப்புகள்">📘 Classes Offered</h3>
       <ul>
-        <li>✅ LKG – 8th Std: All Subjects Foundation</li>
-        <li>✅ 9th & 10th Std: Board Exam Focused Coaching</li>
-        <li>✅ 11th & 12th Std: Science | Computer | Commerce | Mathematics</li>
-        <li>✅ Special: 10th & 12th Individual Subject Classes Available</li>
+        <li data-en="✅ LKG – 8th Std: All Subjects Foundation" data-ta="✅ LKG – 8ம் வகுப்பு: அனைத்து பாடங்களின் அடித்தளம்">✅ LKG – 8th Std: All Subjects Foundation</li>
+        <li data-en="✅ 9th & 10th Std: Board Exam Focused Coaching" data-ta="✅ 9ம் & 10ம் வகுப்பு: வார்டு தேர்வு கவனம் கற்றல்">✅ 9th & 10th Std: Board Exam Focused Coaching</li>
+        <li data-en="✅ 11th & 12th Std: Science | Computer | Commerce | Mathematics" data-ta="✅ 11ம் & 12ம் வகுப்பு: அறிவியல் | கணினி | வர்த்தகம் | கணிதம்">✅ 11th & 12th Std: Science | Computer | Commerce | Mathematics</li>
+        <li data-en="✅ Special: 10th & 12th Individual Subject Classes Available" data-ta="✅ சிறப்பு: 10ம் & 12ம் தனிப்பட்ட பாட வகுப்புகள் கிடைக்கும்">✅ Special: 10th & 12th Individual Subject Classes Available</li>
       </ul>
 
-      <h3>🌟 Why Choose Us?</h3>
+      <h3 data-en="🌟 Why Choose Us?" data-ta="🌟 எங்களை ஏன் தேர்வு செய்வது?">🌟 Why Choose Us?</h3>
       <ul>
-        <li>✔️ Experienced Teachers</li>
-        <li>✔️ Individual Attention</li>
-        <li>✔️ Regular Tests & Progress Tracking</li>
-        <li>✔️ Affordable Fees</li>
+        <li data-en="✔️ Experienced Teachers" data-ta="✔️ அனுபவம் வாய்ந்த ஆசிரியர்கள்">✔️ Experienced Teachers</li>
+        <li data-en="✔️ Individual Attention" data-ta="✔️ தனிப்பட்ட கவனம்">✔️ Individual Attention</li>
+        <li data-en="✔️ Regular Tests & Progress Tracking" data-ta="✔️ அடிக்கடி தேர்வுகள் மற்றும் முன்னேற்ற கண்காணிப்பு">✔️ Regular Tests & Progress Tracking</li>
+        <li data-en="✔️ Affordable Fees" data-ta="✔️ மலிவு கட்டணங்கள்">✔️ Affordable Fees</li>
       </ul>
 
-      <p><strong>📍 Location:</strong> Gandhi Nagar, Manguttaipalyam, Tiruchengode</p>
+      <p><strong data-en="📍 Location:" data-ta="📍 இடம்:">📍 Location:</strong> Gandhi Nagar, Manguttaipalyam, Tiruchengode</p>
     </div>
 
-    <a class="whatsapp-btn section" href="https://wa.me/9150306506" target="_blank">📞 Chat on WhatsApp</a>
+    <a class="whatsapp-btn section" href="https://wa.me/9150306506" target="_blank" data-en="📞 Chat on WhatsApp" data-ta="📞 வாட்ஸ்அப்பில் தொடர்பு கொள்ளுங்கள்">📞 Chat on WhatsApp</a>
 
-    <footer class="section">
-      © 2025 Rise & Shine Tuition Centre | All Rights Reserved
-    </footer>
+    <footer class="section" data-en="© 2025 Rise & Shine Tuition Centre | All Rights Reserved" data-ta="© 2025 ரைஸ் & ஷைன் ட்யூஷன் சென்டர் | அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை">© 2025 Rise & Shine Tuition Centre | All Rights Reserved</footer>
   </div>
 
-  <!-- Scroll animation script -->
+  <!-- Scripts -->
   <script>
     const sections = document.querySelectorAll('.section');
+    const toggleBtn = document.querySelector('.lang-toggle');
+    let isTamil = false;
 
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
+        if (entry.isIntersecting) entry.target.classList.add('visible');
       });
     }, { threshold: 0.2 });
 
-    sections.forEach(section => {
-      observer.observe(section);
-    });
+    sections.forEach(section => observer.observe(section));
+
+    function toggleLanguage() {
+      isTamil = !isTamil;
+      document.querySelectorAll('[data-en]').forEach(el => {
+        el.textContent = isTamil ? el.getAttribute('data-ta') : el.getAttribute('data-en');
+      });
+      toggleBtn.textContent = isTamil ? 'English' : 'தமிழ்';
+    }
   </script>
 </body>
 </html>
