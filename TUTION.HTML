@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rise & Shine Tuition Centre</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0a0f30, #1a1f45);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    .container {
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .logo img {
+      width: 180px;
+      height: auto;
+      animation: floatLogo 4s ease-in-out infinite;
+      filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+    }
+
+    h1 {
+      font-size: 40px;
+      margin-top: 20px;
+      background: linear-gradient(90deg, #ffd700, #00ffff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-transform: uppercase;
+      animation: glowText 2s ease-in-out infinite alternate;
+    }
+
+    h2, h3 {
+      color: #ddd;
+      margin: 10px 0;
+    }
+
+    .highlight {
+      font-size: 20px;
+      font-weight: 600;
+      margin-top: 10px;
+      color: #ffd700;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .subheading {
+      font-size: 18px;
+      color: #00ffff;
+      margin-top: 10px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .section {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+
+    .section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 25px;
+      width: 280px;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      animation: floatCard 6s ease-in-out infinite;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+    }
+
+    .card h3 {
+      color: #ffd700;
+      margin-bottom: 10px;
+    }
+
+    .details {
+      text-align: left;
+      margin: 40px auto;
+      max-width: 700px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 25px;
+      border-radius: 15px;
+      line-height: 1.8;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    }
+
+    .details h3 {
+      color: #00ffff;
+      text-align: center;
+    }
+
+    ul {
+      text-align: left;
+      margin-left: 20px;
+    }
+
+    .whatsapp-btn {
+      display: inline-block;
+      margin-top: 40px;
+      background-color: #25d366;
+      color: white;
+      padding: 15px 35px;
+      border-radius: 50px;
+      font-size: 18px;
+      text-decoration: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: pulse 2s infinite;
+    }
+
+    .whatsapp-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 25px rgba(37, 211, 102, 0.7);
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 14px;
+      color: #aaa;
+      animation: fadeInUp 2s ease-in-out;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes glowText {
+      from { text-shadow: 0 0 10px #00ffff; }
+      to { text-shadow: 0 0 25px #ffd700; }
+    }
+
+    @keyframes floatLogo {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+
+    @keyframes floatCard {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+      70% { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="section logo">
+      <!-- ✅ Use converted direct Drive link -->
+      <img src="p1.jpeg" style="border-radius: 50%;" alt="Rise & Shine Tuition Centre Logo">
+    </div>
+
+    <h1 class="section">Rise & Shine Tuition Centre</h1>
+    <h2 class="section">From LKG to XII – Strong Basics, Bright Future</h2>
+    <p class="subheading section">✨ Admissions Open! ✨</p>
+
+    <div class="card-container section">
+      <div class="card">
+        <h3>Maths</h3>
+        <p>Concept clarity with real-life examples and fun activities.</p>
+      </div>
+      <div class="card">
+        <h3>Science</h3>
+        <p>Learn experiments, projects, and critical thinking the smart way.</p>
+      </div>
+      <div class="card">
+        <h3>English</h3>
+        <p>Improve grammar, writing, and communication confidence.</p>
+      </div>
+      <div class="card">
+        <h3>All Subjects</h3>
+        <p>Comprehensive tuition for every board and standard.</p>
+      </div>
+    </div>
+
+    <div class="details section">
+      <h3>👩‍🏫 Expert Faculty</h3>
+      <p><strong>V. Gokila</strong> – B.Sc. (Mathematics)<br>
+      <strong>D. Kaviya Anjali</strong> – B.A., M.A. (English)<br>
+      <strong>P. Shalini</strong> – B.A. (English), M.B.A</p>
+
+      <h3>📘 Classes Offered</h3>
+      <ul>
+        <li>✅ LKG – 8th Std: All Subjects Foundation</li>
+        <li>✅ 9th & 10th Std: Board Exam Focused Coaching</li>
+        <li>✅ 11th & 12th Std: Science | Computer | Commerce | Mathematics</li>
+        <li>✅ Special: 10th & 12th Individual Subject Classes Available</li>
+      </ul>
+
+      <h3>🌟 Why Choose Us?</h3>
+      <ul>
+        <li>✔️ Experienced Teachers</li>
+        <li>✔️ Individual Attention</li>
+        <li>✔️ Regular Tests & Progress Tracking</li>
+        <li>✔️ Affordable Fees</li>
+      </ul>
+
+      <p><strong>📍 Location:</strong> Gandhi Nagar, Manguttaipalyam, Tiruchengode</p>
+    </div>
+
+    <a class="whatsapp-btn section" href="https://wa.me/9150306506" target="_blank">📞 Chat on WhatsApp</a>
+
+    <footer class="section">
+      © 2025 Rise & Shine Tuition Centre | All Rights Reserved
+    </footer>
+  </div>
+
+  <!-- Scroll animation script -->
+  <script>
+    const sections = document.querySelectorAll('.section');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+</body>
+</html>
