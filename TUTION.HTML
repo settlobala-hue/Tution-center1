@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rise & Shine Tuition Centre</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0a0f30, #1a1f45);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    .lang-toggle {
+      position: fixed;
+      top: 15px;
+      right: 20px;
+      background: #ffd700;
+      color: #000;
+      padding: 8px 15px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: 600;
+      z-index: 100;
+    }
+
+    .container {
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .logo img {
+      width: 180px;
+      height: auto;
+      animation: floatLogo 4s ease-in-out infinite;
+      filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+    }
+
+    h1 {
+      font-size: 40px;
+      margin-top: 20px;
+      background: linear-gradient(90deg, #ffd700, #00ffff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-transform: uppercase;
+      animation: glowText 2s ease-in-out infinite alternate;
+    }
+
+    h2, h3 {
+      color: #ddd;
+      margin: 10px 0;
+    }
+
+    .highlight {
+      font-size: 20px;
+      font-weight: 600;
+      margin-top: 10px;
+      color: #ffd700;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .subheading {
+      font-size: 18px;
+      color: #00ffff;
+      margin-top: 10px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .section {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+
+    .section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 25px;
+      width: 280px;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      animation: floatCard 6s ease-in-out infinite;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+    }
+
+    .card h3 {
+      color: #ffd700;
+      margin-bottom: 10px;
+    }
+
+    .details {
+      text-align: left;
+      margin: 40px auto;
+      max-width: 700px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 25px;
+      border-radius: 15px;
+      line-height: 1.8;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    }
+
+    .details h3 {
+      color: #00ffff;
+      text-align: center;
+    }
+
+    ul {
+      text-align: left;
+      margin-left: 20px;
+    }
+
+    .whatsapp-btn {
+      display: inline-block;
+      margin-top: 40px;
+      background-color: #25d366;
+      color: white;
+      padding: 15px 35px;
+      border-radius: 50px;
+      font-size: 18px;
+      text-decoration: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: pulse 2s infinite;
+    }
+
+    .whatsapp-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 25px rgba(37, 211, 102, 0.7);
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 14px;
+      color: #aaa;
+      animation: fadeInUp 2s ease-in-out;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes glowText {
+      from { text-shadow: 0 0 10px #00ffff; }
+      to { text-shadow: 0 0 25px #ffd700; }
+    }
+
+    @keyframes floatLogo {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+
+    @keyframes floatCard {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+      70% { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="lang-toggle" onclick="toggleLanguage()">தமிழ்</div>
+
+  <div class="container">
+    <div class="section logo">
+      <img src="p1.jpeg" style="border-radius: 50% " alt="Logo">
+    </div>
+
+    <h1 class="section" data-en="Rise & Shine Tuition Centre" data-ta="ரைஸ் & ஷைன் ட்யூஷன் சென்டர்">Rise & Shine Tuition Centre</h1>
+    <h2 class="section" data-en="From LKG to XII – Strong Basics, Bright Future" data-ta="LKG முதல் XII வரை – வலுவான அடித்தளம், பிரகாசமான எதிர்காலம்">From LKG to XII – Strong Basics, Bright Future</h2>
+    <p class="subheading section" data-en="✨ Admissions Open! ✨" data-ta="✨ சேர்க்கைகள் திறக்கப்பட்டுள்ளன! ✨">✨ Admissions Open! ✨</p>
+
+    <div class="card-container section">
+      <div class="card">
+        <h3 data-en="Maths" data-ta="கணிதம்">Maths</h3>
+        <p data-en="Concept clarity with real-life examples and fun activities."
+           data-ta="நிகழ்வுகளில் எடுத்துக்காட்டுகளுடன் கருத்துகளை தெளிவாக்குதல் மற்றும் பொழுதுபோக்கு செயல்பாடுகள்.">
+           Concept clarity with real-life examples and fun activities.
+        </p>
+      </div>
+      <div class="card">
+        <h3 data-en="Science" data-ta="அறிவியல்">Science</h3>
+        <p data-en="Learn experiments, projects, and critical thinking the smart way."
+           data-ta="சோதனைகள், திட்டங்கள் மற்றும் புத்திசாலியான வழியில் விமர்சன சிந்தனை கற்றுக்கொள்ளுங்கள்.">
+           Learn experiments, projects, and critical thinking the smart way.
+        </p>
+      </div>
+      <div class="card">
+        <h3 data-en="English" data-ta="ஆங்கிலம்">English</h3>
+        <p data-en="Improve grammar, writing, and communication confidence."
+           data-ta="இலக்கணம், எழுத்து மற்றும் தொடர்பு நம்பிக்கையை மேம்படுத்துங்கள்.">
+           Improve grammar, writing, and communication confidence.
+        </p>
+      </div>
+      <div class="card">
+        <h3 data-en="All Subjects" data-ta="அனைத்து பாடங்கள்">All Subjects</h3>
+        <p data-en="Comprehensive tuition for every board and standard."
+           data-ta="ஒவ்வொரு போர்டுக்கும் மற்றும் தரத்துக்கும் விரிவான ட்யூஷன்.">
+           Comprehensive tuition for every board and standard.
+        </p>
+      </div>
+    </div>
+
+    <div class="details section">
+      <h3 data-en="👩‍🏫 Expert Faculty" data-ta="👩‍🏫 நிபுணர் ஆசிரியர்கள்">👩‍🏫 Expert Faculty</h3>
+      <p>
+        <strong>V. Gokila</strong> – B.Sc. (Mathematics)<br>
+        <strong>D. Kaviya Anjali</strong> – B.A., M.A. (English)<br>
+        <strong>P. Shalini</strong> – B.A. (English), M.B.A
+      </p>
+
+      <h3 data-en="📘 Classes Offered" data-ta="📘 வழங்கப்படும் வகுப்புகள்">📘 Classes Offered</h3>
+      <ul>
+        <li data-en="✅ LKG – 8th Std: All Subjects Foundation" data-ta="✅ LKG – 8ம் வகுப்பு: அனைத்து பாடங்களின் அடித்தளம்">✅ LKG – 8th Std: All Subjects Foundation</li>
+        <li data-en="✅ 9th & 10th Std: Board Exam Focused Coaching" data-ta="✅ 9ம் & 10ம் வகுப்பு: வார்டு தேர்வு கவனம் கற்றல்">✅ 9th & 10th Std: Board Exam Focused Coaching</li>
+        <li data-en="✅ 11th & 12th Std: Science | Computer | Commerce | Mathematics" data-ta="✅ 11ம் & 12ம் வகுப்பு: அறிவியல் | கணினி | வர்த்தகம் | கணிதம்">✅ 11th & 12th Std: Science | Computer | Commerce | Mathematics</li>
+        <li data-en="✅ Special: 10th & 12th Individual Subject Classes Available" data-ta="✅ சிறப்பு: 10ம் & 12ம் தனிப்பட்ட பாட வகுப்புகள் கிடைக்கும்">✅ Special: 10th & 12th Individual Subject Classes Available</li>
+      </ul>
+
+      <h3 data-en="🌟 Why Choose Us?" data-ta="🌟 எங்களை ஏன் தேர்வு செய்வது?">🌟 Why Choose Us?</h3>
+      <ul>
+        <li data-en="✔️ Experienced Teachers" data-ta="✔️ அனுபவம் வாய்ந்த ஆசிரியர்கள்">✔️ Experienced Teachers</li>
+        <li data-en="✔️ Individual Attention" data-ta="✔️ தனிப்பட்ட கவனம்">✔️ Individual Attention</li>
+        <li data-en="✔️ Regular Tests & Progress Tracking" data-ta="✔️ அடிக்கடி தேர்வுகள் மற்றும் முன்னேற்ற கண்காணிப்பு">✔️ Regular Tests & Progress Tracking</li>
+        <li data-en="✔️ Affordable Fees" data-ta="✔️ மலிவு கட்டணங்கள்">✔️ Affordable Fees</li>
+      </ul>
+
+      <p><strong data-en="📍 Location:" data-ta="📍 இடம்:">📍 Location:</strong> Gandhi Nagar, Manguttaipalyam, Tiruchengode</p>
+    </div>
+
+    <a class="whatsapp-btn section" href="https://wa.me/9150306506" target="_blank" data-en="📞 Chat on WhatsApp" data-ta="📞 வாட்ஸ்அப்பில் தொடர்பு கொள்ளுங்கள்">📞 Chat on WhatsApp</a>
+
+    <footer class="section" data-en="© 2025 Rise & Shine Tuition Centre | All Rights Reserved" data-ta="© 2025 ரைஸ் & ஷைன் ட்யூஷன் சென்டர் | அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை">© 2025 Rise & Shine Tuition Centre | All Rights Reserved</footer>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    const sections = document.querySelectorAll('.section');
+    const toggleBtn = document.querySelector('.lang-toggle');
+    let isTamil = false;
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.2 });
+
+    sections.forEach(section => observer.observe(section));
+
+    function toggleLanguage() {
+      isTamil = !isTamil;
+      document.querySelectorAll('[data-en]').forEach(el => {
+        el.textContent = isTamil ? el.getAttribute('data-ta') : el.getAttribute('data-en');
+      });
+      toggleBtn.textContent = isTamil ? 'English' : 'தமிழ்';
+    }
+  </script>
+</body>
+</html>
